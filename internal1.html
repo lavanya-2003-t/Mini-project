@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+table, tr, td, th
+ {
+  border: 1px solid black;
+}
+
+th 
+{
+  vertical-align: top;
+}
+
+td:empty:after 
+{
+   /* HTML entity of &nbsp; */
+   td_column: none;
+   td_rows:none;
+}
+a {
+  text-decoration: right;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.previous {
+  background-color:black;
+  color: white;
+}
+.btn {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background: #5F9EA0;
+  border: none;
+  border-radius: 10px;
+}
+.next {
+
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+<body>
+  <?php include('errors.php'); ?>
+<h2>INTERNAL RESULT ANALYSIS :&nbsp<select id="mySelect">
+  <option value='1'>1</option>
+
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+</select></h2>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+<br><br>
+<table align="center" width="100%" border="1" cellspacing="1" cellpadding="0">
+<thead>
+  <tr>
+<th rowspan="2" align="center" valign="top">S.No</th>
+<th rowspan="2" align="center" valign="top">Register NO</th>
+<th rowspan="2" align="center" valign="top">Name of the Student</th>
+<th rowspan="2" align="center" valign="top">Community</th>
+<th rowspan="2" align="center" valign="top">MQ/GQ</th>
+<th rowspan="2" align="center" valign="top">D/HS</th>
+<th rowspan="2" align="center" valign="top">T/E</th>
+<th colspan="6" align="center" valign="top">Marks Scored is the Subject </th>
+<th colspan="3" align="center" valign="top"> Number of the Subject</th>
+  </tr>
+<tr>
+    <th contenteditable="true">EM</th>
+    <th contenteditable="true">EC</th>
+    <th contenteditable="true">EP</th>
+    <th contenteditable="true">EG</th>
+    <th contenteditable="true">PY</th>
+    <th contenteditable="true">CM</th>
+    <th contenteditable="true">pass</th>
+    <th contenteditable="true">fail</th>
+    <th contenteditable="true">absent</th>
+</tr>
+</thead>
+<tbody>
+ <tr>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+    <td align="center" valign="top"contenteditable="true">&nbsp;</td>
+</tr></tbody>
+<tr> 
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+
+<tr>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+     <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+ <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+   
+  </tr>
+  <tr>
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+  <tr>
+ <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+     </tr>
+  <tr>
+     <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+  <tr>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+  <tr>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+    
+    
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    
+  </tr>
+<tr>
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+  
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+  
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+   
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+<tr>
+  
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr><tr>
+   <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+    <td contenteditable="true"><br></td>
+  </tr>
+</table>
+<br>
+<br>
+ &nbsp &nbsp &nbsp <a href="index2.html" class="previous"> Previous</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="form2.html" class="next">Next </a>
+ 
+<center><div class="input-group"><button type="submit" class="btn" name="form1_user">submit</button></div></center> 
+</html>
